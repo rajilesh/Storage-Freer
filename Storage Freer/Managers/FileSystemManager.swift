@@ -30,7 +30,7 @@ public class FileSystemManager: ObservableObject {
 
         directoryQueue.async {
             do {
-                let contents = try self.fileManager.contentsOfDirectory(at: directoryURL, includingPropertiesForKeys: [.isDirectoryKey, .fileSizeKey], options: .skipsHiddenFiles)
+                let contents = try self.fileManager.contentsOfDirectory(at: directoryURL, includingPropertiesForKeys: [.isDirectoryKey, .fileSizeKey], options: [])
                 
                 var initialItems: [FileSystemItem] = []
                 for itemURL in contents {
@@ -140,7 +140,7 @@ public class FileSystemManager: ObservableObject {
         }
 
         var totalSize: Int64 = 0
-        guard let enumerator = fileManager.enumerator(at: url, includingPropertiesForKeys: [.fileSizeKey], options: .skipsHiddenFiles, errorHandler: { (url, error) -> Bool in
+        guard let enumerator = fileManager.enumerator(at: url, includingPropertiesForKeys: [.fileSizeKey], options: [], errorHandler: { (url, error) -> Bool in
             // Error handler for enumerator
             return true // Continue enumerating
         }) else {
@@ -177,3 +177,4 @@ public class FileSystemManager: ObservableObject {
         return String(format: "%.2f %@", Double(bytes) / pow(1024, Double(digitGroups)), units[digitGroups])
     }
 }
+

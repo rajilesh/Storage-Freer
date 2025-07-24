@@ -21,7 +21,11 @@ public struct FileRowView: View {
             Spacer()
 
             // Size or status
-            if item.isCalculating {
+            if let size = item.size {
+                Text(FileSystemManager.formatBytes(size))
+                    .font(.subheadline)
+                    .foregroundColor(item.error != nil ? .orange : .secondary)
+            } else if item.isCalculating {
                 Text("Calculating...")
                     .font(.subheadline)
                     .foregroundColor(.secondary)
