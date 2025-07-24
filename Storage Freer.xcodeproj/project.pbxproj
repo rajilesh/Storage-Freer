@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A9D7E0262E3203E400E3142E /* Storage_FreerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7E0252E3203E400E3142E /* Storage_FreerApp.swift */; };
+		A9D7E0282E3203E400E3142E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7E0272E3203E400E3142E /* ContentView.swift */; };
+		A9D7E02A2E3203E400E3142E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7E0292E3203E400E3142E /* Item.swift */; };
+		A9D7E02C2E3203E600E3142E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D7E02B2E3203E600E3142E /* Assets.xcassets */; };
+		A9D7E02F2E3203E600E3142E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D7E02E2E3203E600E3142E /* Preview Assets.xcassets */; };
+		A9D7E03A2E3203E600E3142E /* Storage_FreerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7E0392E3203E600E3142E /* Storage_FreerTests.swift */; };
+		A9D7E0442E3203E600E3142E /* Storage_FreerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7E0432E3203E600E3142E /* Storage_FreerUITests.swift */; };
+		A9D7E0462E3203E600E3142E /* Storage_FreerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7E0452E3203E600E3142E /* Storage_FreerUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A9D7E0362E3203E600E3142E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9D7E01A2E3203E400E3142E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9D7E0212E3203E400E3142E;
+			remoteInfo = "Storage Freer";
+		};
+		A9D7E0402E3203E600E3142E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9D7E01A2E3203E400E3142E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9D7E0212E3203E400E3142E;
+			remoteInfo = "Storage Freer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A9D7E0222E3203E400E3142E /* Storage Freer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Storage Freer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9D7E0252E3203E400E3142E /* Storage_FreerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage_FreerApp.swift; sourceTree = "<group>"; };
+		A9D7E0272E3203E400E3142E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A9D7E0292E3203E400E3142E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		A9D7E02B2E3203E600E3142E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A9D7E02E2E3203E600E3142E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A9D7E0302E3203E600E3142E /* Storage_Freer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Storage_Freer.entitlements; sourceTree = "<group>"; };
+		A9D7E0352E3203E600E3142E /* Storage FreerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Storage FreerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9D7E0392E3203E600E3142E /* Storage_FreerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage_FreerTests.swift; sourceTree = "<group>"; };
+		A9D7E03F2E3203E600E3142E /* Storage FreerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Storage FreerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9D7E0432E3203E600E3142E /* Storage_FreerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage_FreerUITests.swift; sourceTree = "<group>"; };
+		A9D7E0452E3203E600E3142E /* Storage_FreerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage_FreerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A9D7E01F2E3203E400E3142E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9D7E0322E3203E600E3142E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9D7E03C2E3203E600E3142E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A9D7E0192E3203E400E3142E = {
+			isa = PBXGroup;
+			children = (
+				A9D7E0242E3203E400E3142E /* Storage Freer */,
+				A9D7E0382E3203E600E3142E /* Storage FreerTests */,
+				A9D7E0422E3203E600E3142E /* Storage FreerUITests */,
+				A9D7E0232E3203E400E3142E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A9D7E0232E3203E400E3142E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9D7E0222E3203E400E3142E /* Storage Freer.app */,
+				A9D7E0352E3203E600E3142E /* Storage FreerTests.xctest */,
+				A9D7E03F2E3203E600E3142E /* Storage FreerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9D7E0242E3203E400E3142E /* Storage Freer */ = {
+			isa = PBXGroup;
+			children = (
+				A9D7E0252E3203E400E3142E /* Storage_FreerApp.swift */,
+				A9D7E0272E3203E400E3142E /* ContentView.swift */,
+				A9D7E0292E3203E400E3142E /* Item.swift */,
+				A9D7E02B2E3203E600E3142E /* Assets.xcassets */,
+				A9D7E0302E3203E600E3142E /* Storage_Freer.entitlements */,
+				A9D7E02D2E3203E600E3142E /* Preview Content */,
+			);
+			path = "Storage Freer";
+			sourceTree = "<group>";
+		};
+		A9D7E02D2E3203E600E3142E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A9D7E02E2E3203E600E3142E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A9D7E0382E3203E600E3142E /* Storage FreerTests */ = {
+			isa = PBXGroup;
+			children = (
+				A9D7E0392E3203E600E3142E /* Storage_FreerTests.swift */,
+			);
+			path = "Storage FreerTests";
+			sourceTree = "<group>";
+		};
+		A9D7E0422E3203E600E3142E /* Storage FreerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A9D7E0432E3203E600E3142E /* Storage_FreerUITests.swift */,
+				A9D7E0452E3203E600E3142E /* Storage_FreerUITestsLaunchTests.swift */,
+			);
+			path = "Storage FreerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A9D7E0212E3203E400E3142E /* Storage Freer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9D7E0492E3203E600E3142E /* Build configuration list for PBXNativeTarget "Storage Freer" */;
+			buildPhases = (
+				A9D7E01E2E3203E400E3142E /* Sources */,
+				A9D7E01F2E3203E400E3142E /* Frameworks */,
+				A9D7E0202E3203E400E3142E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Storage Freer";
+			productName = "Storage Freer";
+			productReference = A9D7E0222E3203E400E3142E /* Storage Freer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A9D7E0342E3203E600E3142E /* Storage FreerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9D7E04C2E3203E600E3142E /* Build configuration list for PBXNativeTarget "Storage FreerTests" */;
+			buildPhases = (
+				A9D7E0312E3203E600E3142E /* Sources */,
+				A9D7E0322E3203E600E3142E /* Frameworks */,
+				A9D7E0332E3203E600E3142E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9D7E0372E3203E600E3142E /* PBXTargetDependency */,
+			);
+			name = "Storage FreerTests";
+			productName = "Storage FreerTests";
+			productReference = A9D7E0352E3203E600E3142E /* Storage FreerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A9D7E03E2E3203E600E3142E /* Storage FreerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9D7E04F2E3203E600E3142E /* Build configuration list for PBXNativeTarget "Storage FreerUITests" */;
+			buildPhases = (
+				A9D7E03B2E3203E600E3142E /* Sources */,
+				A9D7E03C2E3203E600E3142E /* Frameworks */,
+				A9D7E03D2E3203E600E3142E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9D7E0412E3203E600E3142E /* PBXTargetDependency */,
+			);
+			name = "Storage FreerUITests";
+			productName = "Storage FreerUITests";
+			productReference = A9D7E03F2E3203E600E3142E /* Storage FreerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A9D7E01A2E3203E400E3142E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					A9D7E0212E3203E400E3142E = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					A9D7E0342E3203E600E3142E = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = A9D7E0212E3203E400E3142E;
+					};
+					A9D7E03E2E3203E600E3142E = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = A9D7E0212E3203E400E3142E;
+					};
+				};
+			};
+			buildConfigurationList = A9D7E01D2E3203E400E3142E /* Build configuration list for PBXProject "Storage Freer" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A9D7E0192E3203E400E3142E;
+			productRefGroup = A9D7E0232E3203E400E3142E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A9D7E0212E3203E400E3142E /* Storage Freer */,
+				A9D7E0342E3203E600E3142E /* Storage FreerTests */,
+				A9D7E03E2E3203E600E3142E /* Storage FreerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A9D7E0202E3203E400E3142E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9D7E02F2E3203E600E3142E /* Preview Assets.xcassets in Resources */,
+				A9D7E02C2E3203E600E3142E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9D7E0332E3203E600E3142E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9D7E03D2E3203E600E3142E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A9D7E01E2E3203E400E3142E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9D7E0282E3203E400E3142E /* ContentView.swift in Sources */,
+				A9D7E02A2E3203E400E3142E /* Item.swift in Sources */,
+				A9D7E0262E3203E400E3142E /* Storage_FreerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9D7E0312E3203E600E3142E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9D7E03A2E3203E600E3142E /* Storage_FreerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9D7E03B2E3203E600E3142E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9D7E0442E3203E600E3142E /* Storage_FreerUITests.swift in Sources */,
+				A9D7E0462E3203E600E3142E /* Storage_FreerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A9D7E0372E3203E600E3142E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9D7E0212E3203E400E3142E /* Storage Freer */;
+			targetProxy = A9D7E0362E3203E600E3142E /* PBXContainerItemProxy */;
+		};
+		A9D7E0412E3203E600E3142E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9D7E0212E3203E400E3142E /* Storage Freer */;
+			targetProxy = A9D7E0402E3203E600E3142E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A9D7E0472E3203E600E3142E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A9D7E0482E3203E600E3142E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		A9D7E04A2E3203E600E3142E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Storage Freer/Storage_Freer.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Storage Freer/Preview Content\"";
+				DEVELOPMENT_TEAM = 8K85X24M55;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.storage.freer.Storage-Freer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A9D7E04B2E3203E600E3142E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Storage Freer/Storage_Freer.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Storage Freer/Preview Content\"";
+				DEVELOPMENT_TEAM = 8K85X24M55;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.storage.freer.Storage-Freer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A9D7E04D2E3203E600E3142E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8K85X24M55;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.storage.freer.Storage-FreerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Storage Freer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Storage Freer";
+			};
+			name = Debug;
+		};
+		A9D7E04E2E3203E600E3142E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8K85X24M55;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.storage.freer.Storage-FreerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Storage Freer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Storage Freer";
+			};
+			name = Release;
+		};
+		A9D7E0502E3203E600E3142E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8K85X24M55;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.storage.freer.Storage-FreerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Storage Freer";
+			};
+			name = Debug;
+		};
+		A9D7E0512E3203E600E3142E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8K85X24M55;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.storage.freer.Storage-FreerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Storage Freer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A9D7E01D2E3203E400E3142E /* Build configuration list for PBXProject "Storage Freer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9D7E0472E3203E600E3142E /* Debug */,
+				A9D7E0482E3203E600E3142E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9D7E0492E3203E600E3142E /* Build configuration list for PBXNativeTarget "Storage Freer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9D7E04A2E3203E600E3142E /* Debug */,
+				A9D7E04B2E3203E600E3142E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9D7E04C2E3203E600E3142E /* Build configuration list for PBXNativeTarget "Storage FreerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9D7E04D2E3203E600E3142E /* Debug */,
+				A9D7E04E2E3203E600E3142E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9D7E04F2E3203E600E3142E /* Build configuration list for PBXNativeTarget "Storage FreerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9D7E0502E3203E600E3142E /* Debug */,
+				A9D7E0512E3203E600E3142E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A9D7E01A2E3203E400E3142E /* Project object */;
+}
