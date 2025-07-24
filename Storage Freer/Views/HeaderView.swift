@@ -23,6 +23,7 @@ public struct HeaderView: View {
                 if isCalculating {
                     ProgressView()
                         .scaleEffect(0.7)
+                        .frame(width: 20, height: 20)
                 }
             }
 

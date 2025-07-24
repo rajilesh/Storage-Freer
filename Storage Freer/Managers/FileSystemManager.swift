@@ -66,44 +66,40 @@ public class FileSystemManager: ObservableObject {
     /// Calculates the sizes of the items in the `items` array.
     private func calculateSizes(for itemsToProcess: [FileSystemItem]) {
         let group = DispatchGroup()
-        let resultsQueue = DispatchQueue(label: "com.soance.storagefreer.results")
-        var results: [UUID: Int64] = [:]
+        let totalSizeQueue = DispatchQueue(label: "com.soance.storagefreer.totalsize")
+        var runningTotalSize: Int64 = 0
+        var runningPermissionIssues = false
 
         for item in itemsToProcess {
             group.enter()
             
             directoryQueue.async {
                 let size = self.calculateSize(at: item.path)
-                resultsQueue.sync {
-                    results[item.id] = size
+                
+                totalSizeQueue.sync {
+                    if size >= 0 {
+                        runningTotalSize += size
+                    } else {
+                        runningPermissionIssues = true
+                    }
+                }
+
+                DispatchQueue.main.async {
+                    if let index = self.items.firstIndex(where: { $0.id == item.id }) {
+                        self.items[index].size = size
+                        self.items[index].isCalculating = false
+                        if size < 0 {
+                            self.items[index].error = "Permission Denied"
+                        }
+                    }
                 }
                 group.leave()
             }
         }
         
         group.notify(queue: .main) {
-            var finalTotalSize: Int64 = 0
-            var finalHasPermissionIssues = false
-
-            // Apply all results in one go
-            for i in 0..<self.items.count {
-                let id = self.items[i].id
-                if let size = results[id] {
-                    self.items[i].size = size
-                    self.items[i].isCalculating = false // Mark as done
-                    
-                    if size >= 0 {
-                        finalTotalSize += size
-                    } else {
-                        self.items[i].error = "Permission Denied"
-                        finalHasPermissionIssues = true
-                    }
-                }
-            }
-            
-            // Update final properties
-            self.totalSize = finalTotalSize
-            self.hasPermissionIssues = finalHasPermissionIssues
+            self.totalSize = runningTotalSize
+            self.hasPermissionIssues = runningPermissionIssues
             
             // Sort once at the very end
             self.items.sort { (item1, item2) -> Bool in

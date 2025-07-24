@@ -22,8 +22,9 @@ public struct FileRowView: View {
 
             // Size or status
             if item.isCalculating {
-                ProgressView()
-                    .controlSize(.small)
+                Text("Calculating...")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
             } else {
                 Text(FileSystemManager.formatBytes(item.size ?? 0))
                     .font(.subheadline)
