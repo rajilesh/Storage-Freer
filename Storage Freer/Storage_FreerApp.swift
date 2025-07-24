@@ -10,6 +10,8 @@ import SwiftData
 
 @main
 struct Storage_FreerApp: App {
+    @StateObject private var fileSystemManager = FileSystemManager()
+
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
@@ -25,8 +27,11 @@ struct Storage_FreerApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                FileExplorerView(url: nil)
+            }
+            .environmentObject(fileSystemManager)
+            .modelContainer(sharedModelContainer)
         }
-        .modelContainer(sharedModelContainer)
     }
 }

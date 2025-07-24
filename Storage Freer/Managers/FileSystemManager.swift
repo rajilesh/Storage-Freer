@@ -30,7 +30,7 @@ public class FileSystemManager: ObservableObject {
 
         directoryQueue.async {
             do {
-                let contents = try self.fileManager.contentsOfDirectory(at: directoryURL, includingPropertiesForKeys: [.isDirectoryKey, .fileSizeKey], options: .skipsHiddenFiles)
+                let contents = try self.fileManager.contentsOfDirectory(at: directoryURL, includingPropertiesForKeys: [.isDirectoryKey, .fileSizeKey], options: [])
                 
                 var initialItems: [FileSystemItem] = []
                 for itemURL in contents {
@@ -43,7 +43,7 @@ public class FileSystemManager: ObservableObject {
                         // This will be properly flagged in the final update
                     }
                     
-                    var newItem = FileSystemItem(path: itemURL, isDirectory: isDirectory)
+                    let newItem = FileSystemItem(path: itemURL, isDirectory: isDirectory)
                     newItem.isCalculating = true // Mark for spinner UI
                     initialItems.append(newItem)
                 }
@@ -86,10 +86,15 @@ public class FileSystemManager: ObservableObject {
 
                 DispatchQueue.main.async {
                     if let index = self.items.firstIndex(where: { $0.id == item.id }) {
-                        self.items[index].size = size
-                        self.items[index].isCalculating = false
+                        let fileItem = self.items[index]
+                        fileItem.size = size
+                        fileItem.isCalculating = false
                         if size < 0 {
-                            self.items[index].error = "Permission Denied"
+                            fileItem.error = "Permission Denied"
+                        }
+                        // Incrementally update totalSize as each item is calculated
+                        if size >= 0 {
+                            self.totalSize += size
                         }
                     }
                 }
@@ -140,7 +145,7 @@ public class FileSystemManager: ObservableObject {
         }
 
         var totalSize: Int64 = 0
-        guard let enumerator = fileManager.enumerator(at: url, includingPropertiesForKeys: [.fileSizeKey], options: .skipsHiddenFiles, errorHandler: { (url, error) -> Bool in
+        guard let enumerator = fileManager.enumerator(at: url, includingPropertiesForKeys: [.fileSizeKey], options: [], errorHandler: { (url, error) -> Bool in
             // Error handler for enumerator
             return true // Continue enumerating
         }) else {
@@ -163,7 +168,14 @@ public class FileSystemManager: ObservableObject {
     
     /// Opens the given URL in Finder.
     public func openInFinder(at url: URL) {
-        NSWorkspace.shared.activateFileViewerSelecting([url])
+        var isDirectory: ObjCBool = false
+        if FileManager.default.fileExists(atPath: url.path, isDirectory: &isDirectory), isDirectory.boolValue {
+            // Open the folder directly
+            NSWorkspace.shared.open(url)
+        } else {
+            // Open the containing folder and select the file
+            NSWorkspace.shared.activateFileViewerSelecting([url])
+        }
     }
     
     /// Formats bytes into a human-readable string (e.g., "1.23 GB").
@@ -177,3 +189,4 @@ public class FileSystemManager: ObservableObject {
         return String(format: "%.2f %@", Double(bytes) / pow(1024, Double(digitGroups)), units[digitGroups])
     }
 }
+

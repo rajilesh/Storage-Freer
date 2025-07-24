@@ -1,7 +1,8 @@
 import Foundation
+import Combine
 
 /// Represents an item in the file system, such as a file or a directory.
-public struct FileSystemItem: Identifiable, Hashable {
+public class FileSystemItem: ObservableObject, Identifiable, Hashable {
     /// A unique identifier for the item.
     public let id = UUID()
     
@@ -15,13 +16,18 @@ public struct FileSystemItem: Identifiable, Hashable {
     public var isDirectory: Bool
     
     /// The size of the item in bytes. `nil` if not yet calculated. A negative value indicates an error.
-    public var size: Int64?
+    @Published public var size: Int64?
     
     /// A Boolean value indicating whether the size calculation is in progress.
-    public var isCalculating: Bool = false
+    @Published public var isCalculating: Bool = false
     
     /// An error message if accessing the item failed.
-    public var error: String?
+    @Published public var error: String?
+
+    public init(path: URL, isDirectory: Bool) {
+        self.path = path
+        self.isDirectory = isDirectory
+    }
 
     // Conformance to Hashable
     public func hash(into hasher: inout Hasher) {

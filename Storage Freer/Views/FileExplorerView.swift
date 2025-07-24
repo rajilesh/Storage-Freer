@@ -2,7 +2,7 @@ import SwiftUI
 
 /// The main view of the application, displaying the file explorer.
 public struct FileExplorerView: View {
-    @StateObject private var fileSystemManager = FileSystemManager()
+    @EnvironmentObject private var fileSystemManager: FileSystemManager
     let url: URL?
 
     public init(url: URL?) {
@@ -21,8 +21,9 @@ public struct FileExplorerView: View {
 
             // List of files and directories
             List(fileSystemManager.items) { item in
-                NavigationLink(destination: FileExplorerView(url: item.path)) {
+                NavigationLink(destination: FileExplorerView(url: item.path).environmentObject(FileSystemManager())) {
                     FileRowView(item: item)
+                        .environmentObject(fileSystemManager)
                 }
                 .disabled(!item.isDirectory)
             }
@@ -55,6 +56,6 @@ public struct FileExplorerView: View {
 
 struct FileExplorerView_Previews: PreviewProvider {
     static var previews: some View {
-        FileExplorerView(url: nil)
+        FileExplorerView(url: nil).environmentObject(FileSystemManager())
     }
 }
