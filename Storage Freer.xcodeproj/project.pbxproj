@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A9D7E0262E3203E400E3142E /* Storage_FreerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7E0252E3203E400E3142E /* Storage_FreerApp.swift */; };
-		A9D7E0282E3203E400E3142E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7E0272E3203E400E3142E /* ContentView.swift */; };
-		A9D7E02A2E3203E400E3142E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7E0292E3203E400E3142E /* Item.swift */; };
-		A9D7E02C2E3203E600E3142E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D7E02B2E3203E600E3142E /* Assets.xcassets */; };
-		A9D7E02F2E3203E600E3142E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D7E02E2E3203E600E3142E /* Preview Assets.xcassets */; };
+		A9124DCD2E32281000E84B19 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9124DBE2E32281000E84B19 /* Item.swift */; };
+		A9124DD02E32281000E84B19 /* FileSystemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9124DC02E32281000E84B19 /* FileSystemManager.swift */; };
+		A9124DD12E32281000E84B19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9124DC12E32281000E84B19 /* Assets.xcassets */; };
+		A9124DD22E32281000E84B19 /* FileSystemItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9124DC32E32281000E84B19 /* FileSystemItem.swift */; };
+		A9124DD32E32281000E84B19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9124DC52E32281000E84B19 /* Preview Assets.xcassets */; };
+		A9124DD42E32281000E84B19 /* Storage_FreerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9124DC72E32281000E84B19 /* Storage_FreerApp.swift */; };
+		A9124DD52E32281000E84B19 /* FileExplorerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9124DC92E32281000E84B19 /* FileExplorerView.swift */; };
+		A9124DD62E32281000E84B19 /* FileRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9124DCA2E32281000E84B19 /* FileRowView.swift */; };
+		A9124DD72E32281000E84B19 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9124DCB2E32281000E84B19 /* HeaderView.swift */; };
+		A9124DD82E32281000E84B19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9124DCC2E32281000E84B19 /* ContentView.swift */; };
 		A9D7E03A2E3203E600E3142E /* Storage_FreerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7E0392E3203E600E3142E /* Storage_FreerTests.swift */; };
 		A9D7E0442E3203E600E3142E /* Storage_FreerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7E0432E3203E600E3142E /* Storage_FreerUITests.swift */; };
 		A9D7E0462E3203E600E3142E /* Storage_FreerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7E0452E3203E600E3142E /* Storage_FreerUITestsLaunchTests.swift */; };
@@ -35,16 +40,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A9D7E0222E3203E400E3142E /* Storage Freer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Storage Freer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9D7E0252E3203E400E3142E /* Storage_FreerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage_FreerApp.swift; sourceTree = "<group>"; };
-		A9D7E0272E3203E400E3142E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A9D7E0292E3203E400E3142E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		A9D7E02B2E3203E600E3142E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A9D7E02E2E3203E600E3142E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A9D7E0302E3203E600E3142E /* Storage_Freer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Storage_Freer.entitlements; sourceTree = "<group>"; };
-		A9D7E0352E3203E600E3142E /* Storage FreerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Storage FreerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9124DBE2E32281000E84B19 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		A9124DC02E32281000E84B19 /* FileSystemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystemManager.swift; sourceTree = "<group>"; };
+		A9124DC12E32281000E84B19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A9124DC32E32281000E84B19 /* FileSystemItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystemItem.swift; sourceTree = "<group>"; };
+		A9124DC52E32281000E84B19 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A9124DC62E32281000E84B19 /* Storage_Freer.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Storage_Freer.entitlements; sourceTree = "<group>"; };
+		A9124DC72E32281000E84B19 /* Storage_FreerApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage_FreerApp.swift; sourceTree = "<group>"; };
+		A9124DC92E32281000E84B19 /* FileExplorerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileExplorerView.swift; sourceTree = "<group>"; };
+		A9124DCA2E32281000E84B19 /* FileRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileRowView.swift; sourceTree = "<group>"; };
+		A9124DCB2E32281000E84B19 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		A9124DCC2E32281000E84B19 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A9124DCE2E32281000E84B19 /* Storage FreerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Storage FreerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9124DCF2E32281000E84B19 /* Storage FreerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Storage FreerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9D7E0222E3203E400E3142E /* Storage Freer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Storage Freer.app"; path = "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Debug/Storage Freer.app"; sourceTree = "<absolute>"; };
 		A9D7E0392E3203E600E3142E /* Storage_FreerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage_FreerTests.swift; sourceTree = "<group>"; };
-		A9D7E03F2E3203E600E3142E /* Storage FreerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Storage FreerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9D7E0432E3203E600E3142E /* Storage_FreerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage_FreerUITests.swift; sourceTree = "<group>"; };
 		A9D7E0452E3203E600E3142E /* Storage_FreerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage_FreerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,45 +84,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A9D7E0192E3203E400E3142E = {
+		A9124DBD2E32281000E84B19 /* Storage Freer */ = {
 			isa = PBXGroup;
 			children = (
-				A9D7E0242E3203E400E3142E /* Storage Freer */,
-				A9D7E0382E3203E600E3142E /* Storage FreerTests */,
-				A9D7E0422E3203E600E3142E /* Storage FreerUITests */,
-				A9D7E0232E3203E400E3142E /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		A9D7E0232E3203E400E3142E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A9D7E0222E3203E400E3142E /* Storage Freer.app */,
-				A9D7E0352E3203E600E3142E /* Storage FreerTests.xctest */,
-				A9D7E03F2E3203E600E3142E /* Storage FreerUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		A9D7E0242E3203E400E3142E /* Storage Freer */ = {
-			isa = PBXGroup;
-			children = (
-				A9D7E0252E3203E400E3142E /* Storage_FreerApp.swift */,
-				A9D7E0272E3203E400E3142E /* ContentView.swift */,
-				A9D7E0292E3203E400E3142E /* Item.swift */,
-				A9D7E02B2E3203E600E3142E /* Assets.xcassets */,
-				A9D7E0302E3203E600E3142E /* Storage_Freer.entitlements */,
-				A9D7E02D2E3203E600E3142E /* Preview Content */,
+				A9124DBE2E32281000E84B19 /* Item.swift */,
+				A9124DBF2E32281000E84B19 /* Managers */,
+				A9124DC12E32281000E84B19 /* Assets.xcassets */,
+				A9124DC22E32281000E84B19 /* Models */,
+				A9124DC42E32281000E84B19 /* Preview Content */,
+				A9124DC62E32281000E84B19 /* Storage_Freer.entitlements */,
+				A9124DC72E32281000E84B19 /* Storage_FreerApp.swift */,
+				A9124DC82E32281000E84B19 /* Views */,
+				A9124DCC2E32281000E84B19 /* ContentView.swift */,
 			);
 			path = "Storage Freer";
 			sourceTree = "<group>";
 		};
-		A9D7E02D2E3203E600E3142E /* Preview Content */ = {
+		A9124DBF2E32281000E84B19 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				A9D7E02E2E3203E600E3142E /* Preview Assets.xcassets */,
+				A9124DC02E32281000E84B19 /* FileSystemManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		A9124DC22E32281000E84B19 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A9124DC32E32281000E84B19 /* FileSystemItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A9124DC42E32281000E84B19 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A9124DC52E32281000E84B19 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A9124DC82E32281000E84B19 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A9124DC92E32281000E84B19 /* FileExplorerView.swift */,
+				A9124DCA2E32281000E84B19 /* FileRowView.swift */,
+				A9124DCB2E32281000E84B19 /* HeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A9D7E0192E3203E400E3142E = {
+			isa = PBXGroup;
+			children = (
+				A9124DBD2E32281000E84B19 /* Storage Freer */,
+				A9D7E0382E3203E600E3142E /* Storage FreerTests */,
+				A9D7E0422E3203E600E3142E /* Storage FreerUITests */,
+				A9124DCE2E32281000E84B19 /* Storage FreerTests.xctest */,
+				A9124DCF2E32281000E84B19 /* Storage FreerUITests.xctest */,
+			);
 			sourceTree = "<group>";
 		};
 		A9D7E0382E3203E600E3142E /* Storage FreerTests */ = {
@@ -167,7 +197,7 @@
 			);
 			name = "Storage FreerTests";
 			productName = "Storage FreerTests";
-			productReference = A9D7E0352E3203E600E3142E /* Storage FreerTests.xctest */;
+			productReference = A9124DCE2E32281000E84B19 /* Storage FreerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		A9D7E03E2E3203E600E3142E /* Storage FreerUITests */ = {
@@ -185,7 +215,7 @@
 			);
 			name = "Storage FreerUITests";
 			productName = "Storage FreerUITests";
-			productReference = A9D7E03F2E3203E600E3142E /* Storage FreerUITests.xctest */;
+			productReference = A9124DCF2E32281000E84B19 /* Storage FreerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -200,6 +230,7 @@
 				TargetAttributes = {
 					A9D7E0212E3203E400E3142E = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 					};
 					A9D7E0342E3203E600E3142E = {
 						CreatedOnToolsVersion = 15.2;
@@ -220,7 +251,7 @@
 				Base,
 			);
 			mainGroup = A9D7E0192E3203E400E3142E;
-			productRefGroup = A9D7E0232E3203E400E3142E /* Products */;
+			productRefGroup = A9D7E0192E3203E400E3142E;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -236,8 +267,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9D7E02F2E3203E600E3142E /* Preview Assets.xcassets in Resources */,
-				A9D7E02C2E3203E600E3142E /* Assets.xcassets in Resources */,
+				A9124DD32E32281000E84B19 /* Preview Assets.xcassets in Resources */,
+				A9124DD12E32281000E84B19 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +293,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9D7E0282E3203E400E3142E /* ContentView.swift in Sources */,
-				A9D7E02A2E3203E400E3142E /* Item.swift in Sources */,
-				A9D7E0262E3203E400E3142E /* Storage_FreerApp.swift in Sources */,
+				A9124DD02E32281000E84B19 /* FileSystemManager.swift in Sources */,
+				A9124DD22E32281000E84B19 /* FileSystemItem.swift in Sources */,
+				A9124DD82E32281000E84B19 /* ContentView.swift in Sources */,
+				A9124DD52E32281000E84B19 /* FileExplorerView.swift in Sources */,
+				A9124DD62E32281000E84B19 /* FileRowView.swift in Sources */,
+				A9124DD42E32281000E84B19 /* Storage_FreerApp.swift in Sources */,
+				A9124DCD2E32281000E84B19 /* Item.swift in Sources */,
+				A9124DD72E32281000E84B19 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +460,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Storage Freer/Storage_Freer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -443,6 +480,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.storage.freer.Storage-Freer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Storage Freer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -452,6 +491,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Storage Freer/Storage_Freer.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -471,6 +511,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.storage.freer.Storage-Freer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Storage Freer-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
