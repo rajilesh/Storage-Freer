@@ -168,14 +168,7 @@ public class FileSystemManager: ObservableObject {
     
     /// Opens the given URL in Finder.
     public func openInFinder(at url: URL) {
-        var isDirectory: ObjCBool = false
-        if FileManager.default.fileExists(atPath: url.path, isDirectory: &isDirectory), isDirectory.boolValue {
-            // Open the folder directly
-            NSWorkspace.shared.open(url)
-        } else {
-            // Open the containing folder and select the file
-            NSWorkspace.shared.activateFileViewerSelecting([url])
-        }
+        NSWorkspace.shared.activateFileViewerSelecting([url])
     }
     
     /// Loads children (subfolders) for a given FileSystemItem. Only loads folders.
