@@ -1,0 +1,15 @@
+version: "Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)"
+options: "d12912da9e164e0bb9875ec8d408780b8f54783ec7f9720f6a52ef40936f00ed"
+build_start_time: [1753420727, 259942000]
+build_end_time: [1753420727, 980989000]
+inputs:
+  "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/Storage Freer/ContentView.swift": !dirty [1753344128, 893221278]
+  "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/Storage Freer/Item.swift": !dirty [1753336932, 752718333]
+  "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/Storage Freer/Managers/FileSystemManager.swift": !dirty [1753420483, 367614274]
+  "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/Storage Freer/Models/FileSystemItem.swift": !dirty [1753420423, 885737462]
+  "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/Storage Freer/Storage_FreerApp.swift": !dirty [1753419721, 40441638]
+  "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/Storage Freer/Views/FileExplorerView.swift": !dirty [1753420697, 264159074]
+  "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/Storage Freer/Views/FileRowView.swift": !dirty [1753420180, 262641212]
+  "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/Storage Freer/Views/HeaderView.swift": !dirty [1753346833, 168839052]
+  ? "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/DerivedSources/GeneratedAssetSymbols.swift"
+  : !dirty [1753420470, 729533706]

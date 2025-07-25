@@ -28,7 +28,7 @@ struct Storage_FreerApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                FileExplorerView(url: nil)
+                FileExplorerView()
             }
             .environmentObject(fileSystemManager)
             .modelContainer(sharedModelContainer)

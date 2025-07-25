@@ -1,0 +1,55 @@
+{
+  "" : {
+    "const-values" : "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/Storage Freer-master.swiftconstvalues",
+    "dependencies" : "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/Storage Freer-master.d",
+    "diagnostics" : "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/Storage Freer-master.dia",
+    "emit-module-dependencies" : "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/Storage Freer-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/Storage Freer-master-emit-module.dia",
+    "swift-dependencies" : "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/Storage Freer-master.swiftdeps"
+  },
+  "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "index-unit-output-path" : "/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/GeneratedAssetSymbols.o"
+  },
+  "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/Storage Freer/ContentView.swift" : {
+    "index-unit-output-path" : "/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/ContentView.o"
+  },
+  "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/Storage Freer/Item.swift" : {
+    "index-unit-output-path" : "/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/Item.o",
+    "llvm-bc" : "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/Item.bc",
+    "object" : "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/Item.o"
+  },
+  "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/Storage Freer/Managers/FileSystemManager.swift" : {
+    "index-unit-output-path" : "/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/FileSystemManager.o",
+    "llvm-bc" : "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/FileSystemManager.bc",
+    "object" : "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/FileSystemManager.o"
+  },
+  "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/Storage Freer/Models/FileSystemItem.swift" : {
+    "index-unit-output-path" : "/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/FileSystemItem.o",
+    "llvm-bc" : "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/FileSystemItem.bc",
+    "object" : "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/FileSystemItem.o"
+  },
+  "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/Storage Freer/Storage_FreerApp.swift" : {
+    "index-unit-output-path" : "/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/Storage_FreerApp.o",
+    "llvm-bc" : "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/Storage_FreerApp.bc",
+    "object" : "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/Storage_FreerApp.o"
+  },
+  "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/Storage Freer/Views/FileExplorerView.swift" : {
+    "index-unit-output-path" : "/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/FileExplorerView.o",
+    "llvm-bc" : "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/FileExplorerView.bc",
+    "object" : "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/FileExplorerView.o"
+  },
+  "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/Storage Freer/Views/FileRowView.swift" : {
+    "index-unit-output-path" : "/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/FileRowView.o",
+    "llvm-bc" : "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/FileRowView.bc",
+    "object" : "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/FileRowView.o"
+  },
+  "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/Storage Freer/Views/HeaderView.swift" : {
+    "index-unit-output-path" : "/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/HeaderView.o",
+    "llvm-bc" : "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/HeaderView.bc",
+    "object" : "/Users/rajileshpanoli/Desktop/soance_works/apple/apps/Storage Freer/build/Storage Freer.build/Release/Storage Freer.build/Objects-normal/arm64/HeaderView.o"
+  }
+}

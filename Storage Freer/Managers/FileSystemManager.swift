@@ -178,6 +178,34 @@ public class FileSystemManager: ObservableObject {
         }
     }
     
+    /// Loads children (subfolders) for a given FileSystemItem. Only loads folders.
+    public func loadChildren(for item: FileSystemItem, completion: (() -> Void)? = nil) {
+        guard item.isDirectory else { completion?(); return }
+        directoryQueue.async {
+            do {
+                let contents = try self.fileManager.contentsOfDirectory(at: item.path, includingPropertiesForKeys: [.isDirectoryKey], options: [])
+                var children: [FileSystemItem] = []
+                for url in contents {
+                    let isDirectory = (try? url.resourceValues(forKeys: [.isDirectoryKey]).isDirectory) ?? false
+                    if isDirectory {
+                        let child = FileSystemItem(path: url, isDirectory: isDirectory)
+                        children.append(child)
+                    }
+                }
+                DispatchQueue.main.async {
+                    item.children = children
+                    self.calculateSizes(for: children)
+                    completion?()
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    item.children = []
+                    completion?()
+                }
+            }
+        }
+    }
+    
     /// Formats bytes into a human-readable string (e.g., "1.23 GB").
     public static func formatBytes(_ bytes: Int64) -> String {
         guard bytes >= 0 else { return "Access Denied" }

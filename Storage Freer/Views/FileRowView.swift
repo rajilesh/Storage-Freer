@@ -29,14 +29,6 @@ public struct FileRowView: View {
                 Text(FileSystemManager.formatBytes(size))
                     .font(.subheadline)
                     .foregroundColor(item.error != nil ? .orange : .secondary)
-            } else if item.isCalculating {
-                Text("Calculating...")
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-            } else {
-                Text(FileSystemManager.formatBytes(item.size ?? 0))
-                    .font(.subheadline)
-                    .foregroundColor(item.error != nil ? .orange : .secondary)
             } else {
                 Text("-")
                     .font(.subheadline)

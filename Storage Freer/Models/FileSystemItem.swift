@@ -24,6 +24,11 @@ public class FileSystemItem: ObservableObject, Identifiable, Hashable {
     /// An error message if accessing the item failed.
     @Published public var error: String?
 
+    /// Children (subfolders) for sidebar expansion. Nil if not loaded yet.
+    @Published public var children: [FileSystemItem]? = nil
+    /// Whether this folder is expanded in the sidebar.
+    @Published public var isExpanded: Bool = false
+
     public init(path: URL, isDirectory: Bool) {
         self.path = path
         self.isDirectory = isDirectory
