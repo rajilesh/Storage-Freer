@@ -60,24 +60,53 @@ struct SidebarRow: View {
 }
 
 public struct FileExplorerView: View {
-    @EnvironmentObject private var fileSystemManager: FileSystemManager
+    @StateObject private var fileSystemManager = FileSystemManager()
     @State private var selection: FileSystemItem? = nil
     
     public var body: some View {
         NavigationSplitView {
-            FinderSidebar(fileSystemManager: fileSystemManager, selection: $selection)
+            VStack(alignment: .leading) {
+                HeaderView(
+                    totalSize: fileSystemManager.rootTotalSize,
+                    isCalculating: fileSystemManager.isCalculating,
+                    hasPermissionIssues: fileSystemManager.hasPermissionIssues,
+                    currentDirectoryName: "Macintosh HD"
+                )
+                FinderSidebar(fileSystemManager: fileSystemManager, selection: $selection)
+            }
         } detail: {
             if let selected = selection {
                 FolderColumnView(folder: selected, fileSystemManager: fileSystemManager, selection: $selection)
             } else {
-                Text("Select a folder")
-                    .foregroundColor(.secondary)
+                VStack {
+                    if fileSystemManager.isCalculating {
+                        ProgressView("Scanning...")
+                    } else {
+                        Text("Select a folder to view its contents")
+                            .foregroundColor(.secondary)
+                    }
+                }
             }
         }
         .onAppear {
             if fileSystemManager.items.isEmpty {
                 fileSystemManager.scanDirectory(at: nil)
             }
+        }
+        .alert(isPresented: $fileSystemManager.showPermissionAlert) {
+            Alert(
+                title: Text("Permission Required"),
+                message: Text("To access all files and folders, please grant Full Disk Access in System Settings."),
+                primaryButton: .default(Text("Open Settings"), action: {
+                    if let url = URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_FullDiskAccess") {
+                        NSWorkspace.shared.open(url)
+                    }
+                    fileSystemManager.showPermissionAlert = false
+                }),
+                secondaryButton: .cancel {
+                    fileSystemManager.showPermissionAlert = false
+                }
+            )
         }
     }
 }
@@ -133,6 +162,29 @@ struct FolderColumnView: View {
             }
         }
         .frame(minWidth: 300)
+    }
+}
+
+struct PermissionRequestView: View {
+    var body: some View {
+        VStack(spacing: 20) {
+            Image(systemName: "lock.shield.fill")
+                .font(.system(size: 50))
+                .foregroundColor(.accentColor)
+            Text("Full Disk Access Needed")
+                .font(.title2)
+                .fontWeight(.bold)
+            Text("To scan folders like 'Users' and 'Desktop', please grant Full Disk Access in System Settings.")
+                .multilineTextAlignment(.center)
+                .foregroundColor(.secondary)
+                .padding(.horizontal)
+            Button("Open System Settings") {
+                if let url = URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_FullDiskAccess") {
+                    NSWorkspace.shared.open(url)
+                }
+            }
+        }
+        .frame(maxWidth: 400)
     }
 }
 

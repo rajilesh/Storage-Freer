@@ -5,8 +5,10 @@ import AppKit
 public class FileSystemManager: ObservableObject {
     @Published public var items: [FileSystemItem] = []
     @Published public var totalSize: Int64 = 0
+    @Published public var rootTotalSize: Int64 = 0
     @Published public var isCalculating = false
     @Published public var hasPermissionIssues = false
+    @Published public var showPermissionAlert = false
 
     private var sizeCache: [URL: Int64] = [:]
     private let fileManager = FileManager.default
@@ -26,6 +28,7 @@ public class FileSystemManager: ObservableObject {
             self.hasPermissionIssues = false
             self.items = []
             self.totalSize = 0
+            self.rootTotalSize = 0
         }
 
         directoryQueue.async {
@@ -103,8 +106,9 @@ public class FileSystemManager: ObservableObject {
         }
         
         group.notify(queue: .main) {
-            self.totalSize = runningTotalSize
-            self.hasPermissionIssues = runningPermissionIssues
+            // self.totalSize is updated incrementally now.
+            self.rootTotalSize = runningTotalSize
+            self.hasPermissionIssues = self.hasPermissionIssues || runningPermissionIssues
             
             // Sort once at the very end
             self.items.sort { (item1, item2) -> Bool in
@@ -145,25 +149,47 @@ public class FileSystemManager: ObservableObject {
         }
 
         var totalSize: Int64 = 0
-        guard let enumerator = fileManager.enumerator(at: url, includingPropertiesForKeys: [.fileSizeKey], options: [], errorHandler: { (url, error) -> Bool in
-            // Error handler for enumerator
+        var permissionErrorOccurred = false
+        let errorHandler = { (url: URL, error: Error) -> Bool in
+            permissionErrorOccurred = true
             return true // Continue enumerating
-        }) else {
+        }
+        
+        guard let enumerator = fileManager.enumerator(at: url, includingPropertiesForKeys: [.fileSizeKey, .totalFileSizeKey, .totalFileAllocatedSizeKey], options: [.skipsHiddenFiles], errorHandler: errorHandler) else {
             cacheQueue.sync { self.sizeCache[url] = -1 }
             return -1 // Permission error
         }
 
         for case let fileURL as URL in enumerator {
             do {
-                let attributes = try fileManager.attributesOfItem(atPath: fileURL.path)
-                totalSize += attributes[.size] as? Int64 ?? 0
+                let resourceValues = try fileURL.resourceValues(forKeys: [.fileSizeKey])
+                totalSize += Int64(resourceValues.fileSize ?? 0)
             } catch {
-                // Could not access a file, likely a permission issue
+                permissionErrorOccurred = true
+            }
+        }
+        
+        if permissionErrorOccurred && !self.hasPermissionIssues {
+            DispatchQueue.main.async {
+                self.hasPermissionIssues = true
+                if !self.checkFullDiskAccess() {
+                    self.showPermissionAlert = true
+                }
             }
         }
         
         cacheQueue.sync { self.sizeCache[url] = totalSize }
         return totalSize
+    }
+    
+    private func checkFullDiskAccess() -> Bool {
+        let testURL = URL(fileURLWithPath: "/Library/Application Support")
+        do {
+            _ = try fileManager.contentsOfDirectory(atPath: testURL.path)
+            return true
+        } catch {
+            return false
+        }
     }
     
     /// Opens the given URL in Finder.
@@ -193,6 +219,7 @@ public class FileSystemManager: ObservableObject {
             } catch {
                 DispatchQueue.main.async {
                     item.children = []
+                    item.error = "Permission Denied"
                     completion?()
                 }
             }

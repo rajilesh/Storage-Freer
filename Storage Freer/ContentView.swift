@@ -9,9 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
-            FileExplorerView()
-        }
+        FileExplorerView()
         .frame(minWidth: 700, minHeight: 400)
     }
 }
@@ -19,6 +17,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(FileSystemManager())
     }
 }
 
