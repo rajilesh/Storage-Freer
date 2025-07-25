@@ -98,14 +98,9 @@ public struct FileExplorerView: View {
                 title: Text("Permission Required"),
                 message: Text("To access all files and folders, please grant Full Disk Access in System Settings."),
                 primaryButton: .default(Text("Open Settings"), action: {
-                    if let url = URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_FullDiskAccess") {
-                        NSWorkspace.shared.open(url)
-                    }
-                    fileSystemManager.showPermissionAlert = false
+                    fileSystemManager.openPrivacySettings()
                 }),
-                secondaryButton: .cancel {
-                    fileSystemManager.showPermissionAlert = false
-                }
+                secondaryButton: .cancel()
             )
         }
     }
